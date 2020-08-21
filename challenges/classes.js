@@ -25,3 +25,22 @@ const cuboidClass = new CuboidMakerClass(4,5,5);
 console.log(cuboidClass);
 console.log(cuboidClass.volume()); // 100
 console.log(cuboidClass.surfaceArea()); // 130
+
+
+class CubeMaker extends CuboidMakerClass{
+    constructor(length,width,height){
+        super(length,width,height);
+
+    }
+    vol(){
+        return super.volume()
+    }
+    itsSur(){
+        return super.surfaceArea()
+    }
+}
+console.log("HI IM THE STRETCH")
+const cuboidClassOne = new CubeMaker(4,5,5);
+console.log(cuboidClassOne);
+console.log(cuboidClassOne.vol()); // 100
+console.log(cuboidClassOne.surfaceArea()); // 130
